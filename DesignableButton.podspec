@@ -16,7 +16,7 @@ Common button styles, such as corner radius, are also made available in Interfac
 
   s.ios.deployment_target = "8.0"
 
-  s.source           = { :git => "https://github.com/IdleHandsApps/DesignableButton", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/IdleHandsApps/DesignableButton.git", :tag => s.version.to_s }
 
   s.source_files = "Sources/*.swift"
 

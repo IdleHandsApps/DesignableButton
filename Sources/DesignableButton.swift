@@ -28,20 +28,6 @@ class DesignableButton: UIButton {
         designableButton.layer.cornerRadius = designableButton.cornerRadius ?? 0
         designableButton.layer.borderWidth = designableButton.borderWidth ?? 0
         designableButton.layer.borderColor = designableButton.borderColor?.cgColor
-        }, "primary": { (designableButton: DesignableButton) -> Void in
-            if designableButton.isHighlighted || designableButton.isSelected {
-                designableButton.backgroundColor = designableButton.selectedColor ?? ColorNeighbourly.blueSelected()
-            } else if designableButton.isEnabled {
-                designableButton.backgroundColor = designableButton.defaultColor ?? ColorNeighbourly.blue()
-            }
-            else {
-                designableButton.backgroundColor = designableButton.disabledColor ?? ColorNeighbourly.grayLight()
-            }
-            
-            designableButton.setTitleColor(UIColor.white, for: .normal)
-            designableButton.layer.cornerRadius = designableButton.cornerRadius ?? 5
-            designableButton.layer.borderWidth = designableButton.borderWidth ?? 0
-            designableButton.layer.borderColor = designableButton.borderColor != nil ? designableButton.borderColor!.cgColor : nil
         }]   // = [String: ((DesignableButton)->Void)]()
 
     
