@@ -1,21 +1,21 @@
 //
 //  DesignableButton.swift
-//  Neighbourly
+//  Idle Hands Apps
 //
-//  Created by Fraser on 8/02/17.
-//  Copyright © 2017 Neighbourly Ltd. All rights reserved.
+//  Created by Fraser Scott-Morrison on 8/02/17.
+//  Copyright © 2017 Idle Hands Apps. All rights reserved.
 //
 
 import UIKit
 
 @IBDesignable
-class DesignableButton: UIButton {
+open class DesignableButton: UIButton {
     
-    public func getStyles() -> [String: (DesignableButton) -> Void] {
+    open func getStyles() -> [String: (DesignableButton) -> Void] {
         return DesignableButton.styles
     }
-
-    public static var styles = ["": { (designableButton: DesignableButton) -> Void in
+    
+    open static var styles = ["": { (designableButton: DesignableButton) -> Void in
         // default "none" style
         if designableButton.isHighlighted || designableButton.isSelected {
             designableButton.backgroundColor = designableButton.selectedColor
@@ -29,24 +29,24 @@ class DesignableButton: UIButton {
         designableButton.layer.borderWidth = designableButton.borderWidth ?? 0
         designableButton.layer.borderColor = designableButton.borderColor?.cgColor
         }]   // = [String: ((DesignableButton)->Void)]()
-
     
-    /*public static func setStyle(style: @escaping (DesignableButton) -> Void, for key: String) {
+    
+    public static func setStyle(style: @escaping (DesignableButton) -> Void, for key: String) {
         self.styles.updateValue(style, forKey: key.lowercased())
-    }*/
+    }
     
-    public func setStyleForAll() {
+    open func setStyleForAll() {
         self.reversesTitleShadowWhenHighlighted = false
         self.showsTouchWhenHighlighted = false
         self.adjustsImageWhenHighlighted = false
     }
     
     /*public static var styleForAll: ((DesignableButton)->Void) = {(designableButton: DesignableButton) -> Void in
-        designableButton.reversesTitleShadowWhenHighlighted = false
-        designableButton.showsTouchWhenHighlighted = false
-        designableButton.adjustsImageWhenHighlighted = false
-    }*/
-
+     designableButton.reversesTitleShadowWhenHighlighted = false
+     designableButton.showsTouchWhenHighlighted = false
+     designableButton.adjustsImageWhenHighlighted = false
+     }*/
+    
     @IBInspectable open var buttonStyle: String = "" {
         didSet {
             self.updateStyles()
@@ -74,6 +74,8 @@ class DesignableButton: UIButton {
             self.updateStyles()
         }
     }
+    
+    
     @IBInspectable open var borderWidth: CGFloat? {
         didSet {
             self.updateStyles()
@@ -107,7 +109,7 @@ class DesignableButton: UIButton {
         }
     }
     
-    func updateStyles() {
+    open func updateStyles() {
         
         if self.buttonStyle.characters.count > 0 {
             self.setStyleForAll()
