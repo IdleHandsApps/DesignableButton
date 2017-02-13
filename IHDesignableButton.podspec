@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = "DesignableButton"
+  s.name             = "IHDesignableButton"
   s.version          = "0.1"
   s.summary          = "A Custom UIButton with Centralised Reusable UIButton Styles, Powered by Interface Builder"
 
