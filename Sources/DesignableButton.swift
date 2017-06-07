@@ -28,7 +28,7 @@ open class DesignableButton: UIButton {
         designableButton.layer.cornerRadius = designableButton.cornerRadius ?? 0
         designableButton.layer.borderWidth = designableButton.borderWidth ?? 0
         designableButton.layer.borderColor = designableButton.borderColor?.cgColor
-        }]   // = [String: ((DesignableButton)->Void)]()
+        }]
     
     
     public static func setStyle(style: @escaping (DesignableButton) -> Void, for key: String) {
@@ -41,11 +41,11 @@ open class DesignableButton: UIButton {
         self.adjustsImageWhenHighlighted = false
     }
     
-    /*public static var styleForAll: ((DesignableButton)->Void) = {(designableButton: DesignableButton) -> Void in
-     designableButton.reversesTitleShadowWhenHighlighted = false
-     designableButton.showsTouchWhenHighlighted = false
-     designableButton.adjustsImageWhenHighlighted = false
-     }*/
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.updateStyles()
+    }
     
     @IBInspectable open var buttonStyle: String = "" {
         didSet {
@@ -68,18 +68,8 @@ open class DesignableButton: UIButton {
             self.updateStyles()
         }
     }
-    
-    @IBInspectable open var cornerRadius: CGFloat? {
-        didSet {
-            self.updateStyles()
-        }
-    }
-    
-    
-    @IBInspectable open var borderWidth: CGFloat? {
-        didSet {
-            self.updateStyles()
-        }
+    open var cornerRadius: CGFloat? {
+        return _cornerRadius != -1 ? _cornerRadius : nil
     }
     @IBInspectable open var borderColor: UIColor? {
         didSet {
@@ -87,23 +77,40 @@ open class DesignableButton: UIButton {
         }
     }
     
-    open override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        self.updateStyles()
+    @IBInspectable open var _cornerRadius: CGFloat = -1 {
+        didSet {
+            self.updateStyles()
+        }
     }
     
-    open override var isHighlighted: Bool {
+    @IBInspectable open var _borderWidth: CGFloat = -1 {
         didSet {
             self.updateStyles()
         }
     }
-    open override var isSelected: Bool {
+    open var borderWidth: CGFloat? {
+        return _borderWidth != -1 ? _borderWidth : nil
+    }
+    
+    
+    
+    @IBInspectable open var customTextColor: Bool = false {
         didSet {
             self.updateStyles()
         }
     }
-    open override var isEnabled: Bool {
+    
+    @IBInspectable open override var isHighlighted: Bool {
+        didSet {
+            self.updateStyles()
+        }
+    }
+    @IBInspectable open override var isSelected: Bool {
+        didSet {
+            self.updateStyles()
+        }
+    }
+    @IBInspectable open override var isEnabled: Bool {
         didSet {
             self.updateStyles()
         }
@@ -115,12 +122,36 @@ open class DesignableButton: UIButton {
             self.setStyleForAll()
         }
         
-        if let styleBlock = self.getStyles()[self.buttonStyle] as ((DesignableButton)->Void)! {
+        if let styleBlock = self.getStyles()[self.buttonStyle.lowercased()] as ((DesignableButton)->Void)! {
             styleBlock(self)
         }
         
         layer.masksToBounds = layer.cornerRadius > 0
         
-        assert(self.buttonType == UIButtonType.custom, "Designable Button \"\(self.titleLabel?.text)\" buttonType must be Custom") // here
+        assert(self.buttonType == UIButtonType.custom, "Designable Button \"\(self.titleLabel?.text ?? "?")\" buttonType must be Custom") // here
+    }
+}
+
+// helper to put icon above text
+public extension UIButton {
+    
+    func alignImageAndTitleVertically(padding: CGFloat = 6.0) {
+        let imageSize = self.imageView!.frame.size
+        let titleSize = self.titleLabel!.frame.size
+        let totalHeight = imageSize.height + titleSize.height + padding
+        
+        self.imageEdgeInsets = UIEdgeInsets(
+            top: -(totalHeight - imageSize.height),
+            left: 0,
+            bottom: 0,
+            right: -titleSize.width
+        )
+        
+        self.titleEdgeInsets = UIEdgeInsets(
+            top: 0,
+            left: -imageSize.width,
+            bottom: -(totalHeight - titleSize.height),
+            right: 0
+        )
     }
 }
