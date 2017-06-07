@@ -92,9 +92,7 @@ open class DesignableButton: UIButton {
         return _borderWidth != -1 ? _borderWidth : nil
     }
     
-    
-    
-    @IBInspectable open var customTextColor: Bool = false {
+    @IBInspectable open var customTextColor: UIColor? {
         didSet {
             self.updateStyles()
         }
