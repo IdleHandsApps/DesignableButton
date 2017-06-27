@@ -11,6 +11,16 @@ import UIKit
 @IBDesignable
 open class DesignableButton: UIButton {
     
+    required public init(style buttonStyle: String) {
+        super.init(frame: .zero)
+        self.buttonStyle = buttonStyle
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    
     open func getStyles() -> [String: (DesignableButton) -> Void] {
         return DesignableButton.styles
     }
