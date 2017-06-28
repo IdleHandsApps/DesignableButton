@@ -20,6 +20,9 @@ open class DesignableButton: UIButton {
         super.init(coder: aDecoder)
     }
     
+    required public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
     
     open func getStyles() -> [String: (DesignableButton) -> Void] {
         return DesignableButton.styles
