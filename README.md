@@ -84,6 +84,7 @@ Set the Button Style to "primary" or any other button style you're created
 ## Buy now and get thes free gifts :)
 
 An elegant solution for keeping any UIView visible when the keyboard is being shown https://github.com/IdleHandsApps/IHKeyboardAvoiding
+
 An easy way to make your NavBar transparent https://github.com/IdleHandsApps/UINavigationBar-Transparent
 
 ## Author
