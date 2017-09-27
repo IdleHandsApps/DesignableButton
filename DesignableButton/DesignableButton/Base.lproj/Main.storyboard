@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DesignableButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFw-tK-KfV">
+                                <rect key="frame" x="0.0" y="0.0" width="187" height="333"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgY-ar-WLE" customClass="DesignableButton" customModule="DesignableButton" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="146" width="150" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="KW5-0S-4sa"/>
+                                            <constraint firstAttribute="width" constant="150" id="lBz-IW-jzQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Primary Style"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonStyle" value="primary"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="dgY-ar-WLE" firstAttribute="centerX" secondItem="dFw-tK-KfV" secondAttribute="centerX" id="08E-Qe-A2C"/>
+                                    <constraint firstItem="dgY-ar-WLE" firstAttribute="centerY" secondItem="dFw-tK-KfV" secondAttribute="centerY" id="TLI-Zb-tPL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h10-Sx-kIj">
+                                <rect key="frame" x="0.0" y="334" width="187" height="333"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUW-2j-kNv" customClass="DesignableButton" customModule="DesignableButton" customModuleProvider="target">
+                                        <rect key="frame" x="19" y="91.5" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="3Gy-hK-npG"/>
+                                            <constraint firstAttribute="width" constant="150" id="hac-Ef-RdC"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.7843137255" green="0.1137254902" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Icon Style" image="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonStyle" value="icon"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="cUW-2j-kNv" firstAttribute="centerY" secondItem="h10-Sx-kIj" secondAttribute="centerY" id="5Jz-Dr-BY5"/>
+                                    <constraint firstItem="cUW-2j-kNv" firstAttribute="centerX" secondItem="h10-Sx-kIj" secondAttribute="centerX" id="JEE-8r-ivJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7S-9Z-9wy">
+                                <rect key="frame" x="188" y="0.0" width="187" height="333"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pg-5m-FJj" customClass="DesignableButton" customModule="DesignableButton" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="146" width="150" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="0lT-NJ-CRz"/>
+                                            <constraint firstAttribute="height" constant="40" id="jF9-5v-ulU"/>
+                                        </constraints>
+                                        <state key="normal" title="Secondary Style"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonStyle" value="secondary"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="3Pg-5m-FJj" firstAttribute="centerY" secondItem="f7S-9Z-9wy" secondAttribute="centerY" id="Pyn-kv-9Dz"/>
+                                    <constraint firstItem="3Pg-5m-FJj" firstAttribute="centerX" secondItem="f7S-9Z-9wy" secondAttribute="centerX" id="YpM-CM-R9q"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p69-hX-dg5">
+                                <rect key="frame" x="188" y="334" width="187" height="333"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGs-6g-l0H" customClass="DesignableButton" customModule="DesignableButton" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="146" width="150" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="TON-XK-X14"/>
+                                            <constraint firstAttribute="width" constant="150" id="v0N-X3-zjB"/>
+                                        </constraints>
+                                        <state key="normal" title="Plain Style">
+                                            <color key="titleColor" red="0.7843137255" green="0.1137254902" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonStyle" value="plain"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                                <color key="value" red="0.7843137255" green="0.1137254902" blue="0.1333333333" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xGs-6g-l0H" firstAttribute="centerY" secondItem="p69-hX-dg5" secondAttribute="centerY" id="AqF-XG-dzG"/>
+                                    <constraint firstItem="xGs-6g-l0H" firstAttribute="centerX" secondItem="p69-hX-dg5" secondAttribute="centerX" id="L2H-aJ-z11"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p69-hX-dg5" firstAttribute="width" secondItem="dFw-tK-KfV" secondAttribute="width" id="1BZ-iP-Pe7"/>
+                            <constraint firstItem="dFw-tK-KfV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Em-4d-Abc"/>
+                            <constraint firstItem="p69-hX-dg5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="54Y-e5-A8T"/>
+                            <constraint firstItem="dFw-tK-KfV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5q3-ml-0zJ"/>
+                            <constraint firstItem="p69-hX-dg5" firstAttribute="leading" secondItem="h10-Sx-kIj" secondAttribute="trailing" constant="1" id="6n1-jW-ODA"/>
+                            <constraint firstItem="h10-Sx-kIj" firstAttribute="width" secondItem="dFw-tK-KfV" secondAttribute="width" id="837-dc-kTO"/>
+                            <constraint firstItem="p69-hX-dg5" firstAttribute="top" secondItem="f7S-9Z-9wy" secondAttribute="bottom" constant="1" id="BzV-Mm-Lc4"/>
+                            <constraint firstItem="h10-Sx-kIj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="D5g-5S-w9c"/>
+                            <constraint firstItem="p69-hX-dg5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FpS-cu-ty3"/>
+                            <constraint firstItem="f7S-9Z-9wy" firstAttribute="leading" secondItem="dFw-tK-KfV" secondAttribute="trailing" constant="1" id="Ju8-t6-t3K"/>
+                            <constraint firstItem="f7S-9Z-9wy" firstAttribute="width" secondItem="dFw-tK-KfV" secondAttribute="width" id="Utn-kr-HS4"/>
+                            <constraint firstItem="p69-hX-dg5" firstAttribute="height" secondItem="dFw-tK-KfV" secondAttribute="height" id="eQK-ms-zlt"/>
+                            <constraint firstItem="f7S-9Z-9wy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="f2H-BL-7ll"/>
+                            <constraint firstItem="h10-Sx-kIj" firstAttribute="top" secondItem="dFw-tK-KfV" secondAttribute="bottom" constant="1" id="gOZ-d1-mVl"/>
+                            <constraint firstItem="h10-Sx-kIj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ir0-bg-9CL"/>
+                            <constraint firstItem="h10-Sx-kIj" firstAttribute="height" secondItem="dFw-tK-KfV" secondAttribute="height" id="kmN-vs-gnw"/>
+                            <constraint firstItem="f7S-9Z-9wy" firstAttribute="height" secondItem="dFw-tK-KfV" secondAttribute="height" id="qnT-s9-dhb"/>
+                            <constraint firstItem="f7S-9Z-9wy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xIz-Ue-WqJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Button" width="100" height="100"/>
+    </resources>
+</document>
