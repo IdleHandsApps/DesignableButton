@@ -1,5 +1,11 @@
+<p align="center">
+  <img alt="DesignableButton" src="https://github.com/IdleHandsApps/DesignableButton/blob/files/Logo-60.png" />
+</p>
+
 DesignableButton [![Language: Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://swift.org)
 ------------------------------
+
+![alt demo](https://github.com/IdleHandsApps/DesignableButton/blob/files/DesButGif.gif)
 
 DesignableButton is a UIButton subclass that uses a centralised and reusable styling. In InterfaceBuilder, drag and drop a DesignableButton, choose your style and its applied instantly in InterfaceBuilder
 
