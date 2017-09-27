@@ -39,27 +39,32 @@ extension DesignableButton {
         // example style
         DesignableButton.setStyle(style: { (designableButton: DesignableButton) -> Void in
             if designableButton.isHighlighted || designableButton.isSelected {
+                // replace this with your style for selected/highlighted states
                 designableButton.setTitleColor(designableButton.customTextColor ?? UIColor.white, for: UIControlState())
                 designableButton.backgroundColor = designableButton.selectedColor ?? UIColor.red
                 designableButton.layer.borderColor = designableButton.selectedColor?.cgColor ?? UIColor.red.cgColor
                 designableButton.layer.borderWidth = designableButton.borderWidth ?? 0
             } else if designableButton.isEnabled {
+                // replace this with your style for the normal state
                 designableButton.setTitleColor(designableButton.customTextColor ?? UIColor.white, for: UIControlState())
                 designableButton.backgroundColor = designableButton.defaultColor ?? UIColor.blue
                 designableButton.layer.borderColor = designableButton.defaultColor?.cgColor ?? UIColor.blue.cgColor
                 designableButton.layer.borderWidth = designableButton.borderWidth ?? 0
             }
             else {
+                // replace this with your style for the disabled state
                 designableButton.setTitleColor(designableButton.customTextColor ?? UIColor.lightGray, for: UIControlState())
                 designableButton.backgroundColor = designableButton.disabledColor ?? UIColor.lightGray()
                 designableButton.layer.borderColor = designableButton.borderColor?.cgColor ??  UIColor.gray.cgColor
                 designableButton.layer.borderWidth = designableButton.borderWidth ?? 1
             }
-            designableButton.setTitle(designableButton.titleLabel?.text, for: .normal)
             
+            // replace this with your style for all states
             designableButton.layer.cornerRadius = designableButton.cornerRadius ?? 12
             
-        }, for: "primary")
+            designableButton.setTitle(designableButton.titleLabel?.text, for: .normal)
+            
+        }, for: "primary") // this is the name/key of your style
     }
 }
 ```
