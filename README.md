@@ -1,11 +1,7 @@
 DesignableButton [![Language: Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://swift.org)
 ------------------------------
 
-A Custom UIButton with Centralised Styling and common styles available in Interface Builder
-
-## Description
-
-DesignableButton is a UIButton subclass that uses a centralised and reusable styling. In InterfaceBuilder, drag and drop a DesignableButton, choose you style and it applied instantly in InterfaceBuilder
+DesignableButton is a UIButton subclass that uses a centralised and reusable styling. In InterfaceBuilder, drag and drop a DesignableButton, choose your style and its applied instantly in InterfaceBuilder
 
 ## Features
 
