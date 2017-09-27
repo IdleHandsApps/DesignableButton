@@ -6,7 +6,7 @@ DesignableButton is a UIButton subclass that uses a centralised and reusable sty
 ## Features
 
 * One centralised class to define you main button styles so they can be reused
-* Different styles for different button states: Normal, Selected etc
+* Different styles for different button states: Normal/Selected/Disabled
 * The centralised styles can be set in IB (no more IBOutlets needed for programatical styling)
 * View the style in IB in realtime. Even changing button to selected state will update IB
 * Individual buttons can override their centralised styles in IB
