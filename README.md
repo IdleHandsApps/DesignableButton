@@ -1,4 +1,4 @@
-DesignableButton Swift [![Language: Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://swift.org)
+DesignableButton [![Language: Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://swift.org)
 ------------------------------
 
 A Custom UIButton with Centralised Styling and common styles available in Interface Builder
