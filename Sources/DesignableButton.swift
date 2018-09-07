@@ -13,7 +13,10 @@ open class DesignableButton: UIButton {
     
     required public init(style buttonStyle: String) {
         super.init(frame: .zero)
-        self.buttonStyle = buttonStyle
+        defer {
+            // putting this in a defer as didSet is not called from initialisers
+            self.buttonStyle = buttonStyle
+        }
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -52,6 +55,11 @@ open class DesignableButton: UIButton {
         self.reversesTitleShadowWhenHighlighted = false
         self.showsTouchWhenHighlighted = false
         self.adjustsImageWhenHighlighted = false
+        
+        self.titleLabel?.textAlignment = .center
+        self.titleLabel?.numberOfLines = 0
+        self.titleLabel?.adjustsFontSizeToFitWidth = true
+        self.titleLabel?.lineBreakMode = .byClipping //<-- MAGIC LINE
     }
     
     open override func awakeFromNib() {
@@ -129,17 +137,17 @@ open class DesignableButton: UIButton {
     
     open func updateStyles() {
         
-        if self.buttonStyle.characters.count > 0 {
+        if self.buttonStyle.count > 0 {
             self.setStyleForAll()
         }
         
-        if let styleBlock = self.getStyles()[self.buttonStyle.lowercased()] as ((DesignableButton)->Void)! {
+        if let styleBlock = self.getStyles()[self.buttonStyle.lowercased()] {
             styleBlock(self)
         }
         
         layer.masksToBounds = layer.cornerRadius > 0
         
-        assert(self.buttonType == UIButtonType.custom, "Designable Button \"\(self.titleLabel?.text ?? "?")\" buttonType must be Custom") // here
+        assert(self.buttonType == UIButtonType.custom, "Designable Button \"\(self.titleLabel?.text ?? "?")\" buttonType must be Custom")
     }
 }
 
