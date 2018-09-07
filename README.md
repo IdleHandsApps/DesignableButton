@@ -92,7 +92,10 @@ Set the Button Style to "primary" or any other button style you're created
 
 An elegant solution for keeping views visible when the keyboard is being shown https://github.com/IdleHandsApps/IHKeyboardAvoiding
 
-An easy way to make your NavBar transparent 
+A fully automatic status bar overlay for No Internet Connection messages 
+https://github.com/IdleHandsApps/StatusBarOverlay
+
+An extension to easily set your UINavigationBar transparent and hide the shadow
 https://github.com/IdleHandsApps/UINavigationBar-Transparent
 
 ## Author
