@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "IHDesignableButton"
-  s.version          = "1.3"
+  s.version          = "1.5
+"
   s.summary          = "A Custom UIButton with Centralised Reusable UIButton Styles, Powered by Interface Builder"
 
   s.description      = <<-DESC
@@ -14,7 +15,7 @@ Common button styles, such as corner radius, are also made available in Interfac
 
   s.author           = { "Fraser Scott-Morrison" => "fraserscottmorrison@me.com" }
 
-  s.ios.deployment_target = "8.0"
+  s.ios.deployment_target = "10.0"
 
   s.source           = { :git => "https://github.com/IdleHandsApps/DesignableButton.git", :tag => s.version.to_s }
 

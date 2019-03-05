@@ -31,7 +31,7 @@ open class DesignableButton: UIButton {
         return DesignableButton.styles
     }
     
-    open static var styles = ["": { (designableButton: DesignableButton) -> Void in
+    public static var styles = ["": { (designableButton: DesignableButton) -> Void in
         // default "none" style
         if designableButton.isHighlighted || designableButton.isSelected {
             designableButton.backgroundColor = designableButton.selectedColor
@@ -116,6 +116,26 @@ open class DesignableButton: UIButton {
     @IBInspectable open var customTextColor: UIColor? {
         didSet {
             self.updateStyles()
+        }
+    }
+    
+    // support for Dynamic Type without allowing the text to grow too big to fit
+    @IBInspectable open var adjustsFontSizeToFitWidth: Bool = false {
+        didSet {
+            self.titleLabel?.adjustsFontForContentSizeCategory = self.adjustsFontSizeToFitWidth
+            self.titleLabel?.adjustsFontSizeToFitWidth = self.adjustsFontSizeToFitWidth
+            self.titleLabel?.baselineAdjustment = self.adjustsFontSizeToFitWidth ? .alignCenters : .alignBaselines
+            
+            if self.adjustsFontSizeToFitWidth {
+                // When dynamic text changes we need to redraw the layout
+                NotificationCenter.default.addObserver(forName: .UIContentSizeCategoryDidChange, object: nil, queue: OperationQueue.main) { [weak self] notification in
+                    guard let strongSelf = self else { return }
+                    strongSelf.setNeedsLayout()
+                }
+            }
+            else {
+                NotificationCenter.default.removeObserver(self, name: .UIContentSizeCategoryDidChange, object: nil)
+            }
         }
     }
     
