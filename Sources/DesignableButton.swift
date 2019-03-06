@@ -27,11 +27,9 @@ open class DesignableButton: UIButton {
         super.init(frame: frame)
     }
     
-    open func getStyles() -> [String: (DesignableButton) -> Void] {
-        return DesignableButton.styles
-    }
+    private var styles = [String: (DesignableButton) -> Void]()
     
-    public static var styles = ["": { (designableButton: DesignableButton) -> Void in
+    private static var styles = ["": { (designableButton: DesignableButton) -> Void in
         // default "none" style
         if designableButton.isHighlighted || designableButton.isSelected {
             designableButton.backgroundColor = designableButton.selectedColor
@@ -46,12 +44,19 @@ open class DesignableButton: UIButton {
         designableButton.layer.borderColor = designableButton.borderColor?.cgColor
         }]
     
+    private func getStyles() -> [String: (DesignableButton) -> Void] {
+        return self.styles.merging(DesignableButton.styles, uniquingKeysWith: { (first, _) in first })
+    }
+    
+    public func setStyle(style: @escaping (DesignableButton) -> Void, for key: String) {
+        self.styles.updateValue(style, forKey: key.lowercased())
+    }
     
     public static func setStyle(style: @escaping (DesignableButton) -> Void, for key: String) {
         self.styles.updateValue(style, forKey: key.lowercased())
     }
     
-    open func setStyleForAll() {
+    public func setStyleForAll() {
         self.reversesTitleShadowWhenHighlighted = false
         self.showsTouchWhenHighlighted = false
         self.adjustsImageWhenHighlighted = false
@@ -68,59 +73,59 @@ open class DesignableButton: UIButton {
         self.updateStyles()
     }
     
-    @IBInspectable open var buttonStyle: String = "" {
+    @IBInspectable public var buttonStyle: String = "" {
         didSet {
             self.updateStyles()
         }
     }
     
-    @IBInspectable open var defaultColor: UIColor? {
+    @IBInspectable public var defaultColor: UIColor? {
         didSet {
             self.updateStyles()
         }
     }
-    @IBInspectable open var selectedColor: UIColor? {
+    @IBInspectable public var selectedColor: UIColor? {
         didSet {
             self.updateStyles()
         }
     }
-    @IBInspectable open var disabledColor: UIColor? {
+    @IBInspectable public var disabledColor: UIColor? {
         didSet {
             self.updateStyles()
         }
     }
-    open var cornerRadius: CGFloat? {
+    public var cornerRadius: CGFloat? {
         return _cornerRadius != -1 ? _cornerRadius : nil
     }
-    @IBInspectable open var borderColor: UIColor? {
+    @IBInspectable public var borderColor: UIColor? {
         didSet {
             self.updateStyles()
         }
     }
     
-    @IBInspectable open var _cornerRadius: CGFloat = -1 {
+    @IBInspectable public var _cornerRadius: CGFloat = -1 {
         didSet {
             self.updateStyles()
         }
     }
     
-    @IBInspectable open var _borderWidth: CGFloat = -1 {
+    @IBInspectable public var _borderWidth: CGFloat = -1 {
         didSet {
             self.updateStyles()
         }
     }
-    open var borderWidth: CGFloat? {
+    public var borderWidth: CGFloat? {
         return _borderWidth != -1 ? _borderWidth : nil
     }
     
-    @IBInspectable open var customTextColor: UIColor? {
+    @IBInspectable public var customTextColor: UIColor? {
         didSet {
             self.updateStyles()
         }
     }
     
     // support for Dynamic Type without allowing the text to grow too big to fit
-    @IBInspectable open var adjustsFontSizeToFitWidth: Bool = false {
+    @IBInspectable public var adjustsFontSizeToFitWidth: Bool = false {
         didSet {
             self.titleLabel?.adjustsFontForContentSizeCategory = self.adjustsFontSizeToFitWidth
             self.titleLabel?.adjustsFontSizeToFitWidth = self.adjustsFontSizeToFitWidth
@@ -155,7 +160,7 @@ open class DesignableButton: UIButton {
         }
     }
     
-    open func updateStyles() {
+    public func updateStyles() {
         
         if self.buttonStyle.count > 0 {
             self.setStyleForAll()
@@ -174,7 +179,7 @@ open class DesignableButton: UIButton {
 // helper to put icon above text
 public extension UIButton {
     
-    func alignImageAndTitleVertically(padding: CGFloat = 6.0) {
+    public func alignImageAndTitleVertically(padding: CGFloat = 6.0) {
         let imageSize = self.imageView!.frame.size
         let titleSize = self.titleLabel!.frame.size
         let totalHeight = imageSize.height + titleSize.height + padding
