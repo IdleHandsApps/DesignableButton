@@ -23,4 +23,6 @@ Common button styles, such as corner radius, are also made available in Interfac
 
   s.framework       = "UIKit"
   s.requires_arc    = true
+
+  s.swift_version = '4.2'
 end
