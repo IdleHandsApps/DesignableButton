@@ -133,13 +133,13 @@ open class DesignableButton: UIButton {
             
             if self.adjustsFontSizeToFitWidth {
                 // When dynamic text changes we need to redraw the layout
-                NotificationCenter.default.addObserver(forName: .UIContentSizeCategoryDidChange, object: nil, queue: OperationQueue.main) { [weak self] notification in
+                NotificationCenter.default.addObserver(forName: UIContentSizeCategory.didChangeNotification, object: nil, queue: OperationQueue.main) { [weak self] notification in
                     guard let strongSelf = self else { return }
                     strongSelf.setNeedsLayout()
                 }
             }
             else {
-                NotificationCenter.default.removeObserver(self, name: .UIContentSizeCategoryDidChange, object: nil)
+                NotificationCenter.default.removeObserver(self, name: UIContentSizeCategory.didChangeNotification, object: nil)
             }
         }
     }
@@ -172,7 +172,7 @@ open class DesignableButton: UIButton {
         
         layer.masksToBounds = layer.cornerRadius > 0
         
-        assert(self.buttonType == UIButtonType.custom, "Designable Button \"\(self.titleLabel?.text ?? "?")\" buttonType must be Custom")
+        assert(self.buttonType == UIButton.ButtonType.custom, "Designable Button \"\(self.titleLabel?.text ?? "?")\" buttonType must be Custom")
     }
 }
 
