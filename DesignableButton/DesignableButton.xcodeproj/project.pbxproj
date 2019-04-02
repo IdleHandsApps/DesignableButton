@@ -16,6 +16,7 @@
 		4C0D43A61F7B361B0096F625 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D43A51F7B361B0096F625 /* Color.swift */; };
 		4C0D43A71F7B369C0096F625 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D43A21F7B348B0096F625 /* DesignableButton.swift */; };
 		4C65B79721A21BF300D05488 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4C65B79621A21BF300D05488 /* README.md */; };
+		4CE432F822540BE60086BE5A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE432F722540BE60086BE5A /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		4C0D43A51F7B361B0096F625 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		4C194A851F7B48C100210C36 /* IHDesignableButton.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = IHDesignableButton.podspec; path = ../../IHDesignableButton.podspec; sourceTree = "<group>"; };
 		4C65B79621A21BF300D05488 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		4CE432F722540BE60086BE5A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				4C0D43A51F7B361B0096F625 /* Color.swift */,
 				4C0D43931F7B34600096F625 /* Main.storyboard */,
 				4C0D43961F7B34600096F625 /* Assets.xcassets */,
+				4CE432F722540BE60086BE5A /* Colors.xcassets */,
 				4C0D43981F7B34600096F625 /* LaunchScreen.storyboard */,
 				4C0D439B1F7B34600096F625 /* Info.plist */,
 				4C194A851F7B48C100210C36 /* IHDesignableButton.podspec */,
@@ -114,7 +117,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = IdleHandsApps;
 				TargetAttributes = {
 					4C0D438B1F7B34600096F625 = {
@@ -146,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE432F822540BE60086BE5A /* Colors.xcassets in Resources */,
 				4C0D439A1F7B34600096F625 /* LaunchScreen.storyboard in Resources */,
 				4C0D43971F7B34600096F625 /* Assets.xcassets in Resources */,
 				4C65B79721A21BF300D05488 /* README.md in Resources */,
@@ -204,6 +208,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -211,6 +216,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -262,6 +268,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -269,6 +276,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -309,6 +317,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DesignableButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -323,6 +332,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DesignableButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

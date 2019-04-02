@@ -15,6 +15,14 @@ class Color: NSObject {
         return "Palette"
     }
     
+    /*class var red: UIColor {
+        return UIColor(named: "Red") ?? UIColor.red
+    }
+    
+    class var redSelected: UIColor {
+        return UIColor(named: "RedSelected") ?? UIColor.red
+    }*/
+    
     class func red() -> UIColor {
         return UIColor(red: 200/255.0, green: 29/255.0, blue: 34/255.0, alpha: 1.0)
     }
