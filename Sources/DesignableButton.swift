@@ -179,7 +179,7 @@ open class DesignableButton: UIButton {
 // helper to put icon above text
 public extension UIButton {
     
-    public func alignImageAndTitleVertically(padding: CGFloat = 6.0) {
+    func alignImageAndTitleVertically(padding: CGFloat = 6.0) {
         let imageSize = self.imageView!.frame.size
         let titleSize = self.titleLabel!.frame.size
         let totalHeight = imageSize.height + titleSize.height + padding

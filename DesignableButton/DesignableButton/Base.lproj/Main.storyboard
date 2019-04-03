@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="187" height="333"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgY-ar-WLE" customClass="DesignableButton" customModule="DesignableButton" customModuleProvider="target">
-                                        <rect key="frame" x="18" y="146" width="150" height="40"/>
+                                        <rect key="frame" x="18.5" y="146.5" width="150" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="KW5-0S-4sa"/>
                                             <constraint firstAttribute="width" constant="150" id="lBz-IW-jzQ"/>
@@ -33,7 +34,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" name="GrayLight"/>
                                 <constraints>
                                     <constraint firstItem="dgY-ar-WLE" firstAttribute="centerX" secondItem="dFw-tK-KfV" secondAttribute="centerX" id="08E-Qe-A2C"/>
                                     <constraint firstItem="dgY-ar-WLE" firstAttribute="centerY" secondItem="dFw-tK-KfV" secondAttribute="centerY" id="TLI-Zb-tPL"/>
@@ -43,12 +44,12 @@
                                 <rect key="frame" x="0.0" y="334" width="187" height="333"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUW-2j-kNv" customClass="DesignableButton" customModule="DesignableButton" customModuleProvider="target">
-                                        <rect key="frame" x="19" y="91.5" width="150" height="150"/>
+                                        <rect key="frame" x="18.5" y="91.5" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="3Gy-hK-npG"/>
                                             <constraint firstAttribute="width" constant="150" id="hac-Ef-RdC"/>
                                         </constraints>
-                                        <color key="tintColor" red="0.7843137255" green="0.1137254902" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" name="Red"/>
                                         <state key="normal" title="Icon Style" image="Button"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="buttonStyle" value="icon"/>
@@ -65,7 +66,7 @@
                                 <rect key="frame" x="188" y="0.0" width="187" height="333"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pg-5m-FJj" customClass="DesignableButton" customModule="DesignableButton" customModuleProvider="target">
-                                        <rect key="frame" x="18" y="146" width="150" height="40"/>
+                                        <rect key="frame" x="18.5" y="146.5" width="150" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="0lT-NJ-CRz"/>
                                             <constraint firstAttribute="height" constant="40" id="jF9-5v-ulU"/>
@@ -86,13 +87,13 @@
                                 <rect key="frame" x="188" y="334" width="187" height="333"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGs-6g-l0H" customClass="DesignableButton" customModule="DesignableButton" customModuleProvider="target">
-                                        <rect key="frame" x="18" y="146" width="150" height="40"/>
+                                        <rect key="frame" x="18.5" y="146.5" width="150" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="TON-XK-X14"/>
                                             <constraint firstAttribute="width" constant="150" id="v0N-X3-zjB"/>
                                         </constraints>
                                         <state key="normal" title="Plain Style">
-                                            <color key="titleColor" red="0.7843137255" green="0.1137254902" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="Red"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="buttonStyle" value="plain"/>
@@ -139,6 +140,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Button" width="100" height="100"/>
+        <image name="Button" width="300" height="300"/>
+        <namedColor name="GrayLight">
+            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Red">
+            <color red="0.78431372549019607" green="0.11372549019607843" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

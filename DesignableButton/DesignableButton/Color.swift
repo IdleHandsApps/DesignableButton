@@ -15,15 +15,35 @@ class Color: NSObject {
         return "Palette"
     }
     
-    /*class var red: UIColor {
+    class var red: UIColor {
         return UIColor(named: "Red") ?? UIColor.red
     }
     
     class var redSelected: UIColor {
-        return UIColor(named: "RedSelected") ?? UIColor.red
-    }*/
+        return UIColor(named: "RedSelected") ?? UIColor.black
+    }
     
-    class func red() -> UIColor {
+    class var grayLightest: UIColor {
+        return UIColor(named: "GrayLightest") ?? UIColor.black
+    }
+    
+    class var grayLighter: UIColor {
+        return UIColor(named: "GrayLighter") ?? UIColor.black
+    }
+    
+    class var grayLight: UIColor {
+        return UIColor(named: "GrayLight") ?? UIColor.black
+    }
+    
+    class var gray: UIColor {
+        return UIColor(named: "Gray") ?? UIColor.black
+    }
+    
+    class var grayDarker: UIColor {
+        return UIColor(named: "GrayDarker") ?? UIColor.black
+    }
+    
+    /*class func red() -> UIColor {
         return UIColor(red: 200/255.0, green: 29/255.0, blue: 34/255.0, alpha: 1.0)
     }
     
@@ -49,6 +69,6 @@ class Color: NSObject {
     
     class func grayDarker() -> UIColor {
         return UIColor(red: 50/255.0, green: 50/255.0, blue: 50/255.0, alpha: 1.0) //@gray-darker #323232; xib equivalent 65
-    }
+    }*/
 
 }
