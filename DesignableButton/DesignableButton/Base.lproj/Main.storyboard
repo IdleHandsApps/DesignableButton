@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,7 +34,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" name="GrayLight"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="dgY-ar-WLE" firstAttribute="centerX" secondItem="dFw-tK-KfV" secondAttribute="centerX" id="08E-Qe-A2C"/>
                                     <constraint firstItem="dgY-ar-WLE" firstAttribute="centerY" secondItem="dFw-tK-KfV" secondAttribute="centerY" id="TLI-Zb-tPL"/>
@@ -77,7 +77,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="3Pg-5m-FJj" firstAttribute="centerY" secondItem="f7S-9Z-9wy" secondAttribute="centerY" id="Pyn-kv-9Dz"/>
                                     <constraint firstItem="3Pg-5m-FJj" firstAttribute="centerX" secondItem="f7S-9Z-9wy" secondAttribute="centerX" id="YpM-CM-R9q"/>
@@ -114,12 +114,10 @@
                         <constraints>
                             <constraint firstItem="p69-hX-dg5" firstAttribute="width" secondItem="dFw-tK-KfV" secondAttribute="width" id="1BZ-iP-Pe7"/>
                             <constraint firstItem="dFw-tK-KfV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Em-4d-Abc"/>
-                            <constraint firstItem="p69-hX-dg5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="54Y-e5-A8T"/>
                             <constraint firstItem="dFw-tK-KfV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5q3-ml-0zJ"/>
                             <constraint firstItem="p69-hX-dg5" firstAttribute="leading" secondItem="h10-Sx-kIj" secondAttribute="trailing" constant="1" id="6n1-jW-ODA"/>
                             <constraint firstItem="h10-Sx-kIj" firstAttribute="width" secondItem="dFw-tK-KfV" secondAttribute="width" id="837-dc-kTO"/>
                             <constraint firstItem="p69-hX-dg5" firstAttribute="top" secondItem="f7S-9Z-9wy" secondAttribute="bottom" constant="1" id="BzV-Mm-Lc4"/>
-                            <constraint firstItem="h10-Sx-kIj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="D5g-5S-w9c"/>
                             <constraint firstItem="p69-hX-dg5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FpS-cu-ty3"/>
                             <constraint firstItem="f7S-9Z-9wy" firstAttribute="leading" secondItem="dFw-tK-KfV" secondAttribute="trailing" constant="1" id="Ju8-t6-t3K"/>
                             <constraint firstItem="f7S-9Z-9wy" firstAttribute="width" secondItem="dFw-tK-KfV" secondAttribute="width" id="Utn-kr-HS4"/>
@@ -128,8 +126,10 @@
                             <constraint firstItem="h10-Sx-kIj" firstAttribute="top" secondItem="dFw-tK-KfV" secondAttribute="bottom" constant="1" id="gOZ-d1-mVl"/>
                             <constraint firstItem="h10-Sx-kIj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ir0-bg-9CL"/>
                             <constraint firstItem="h10-Sx-kIj" firstAttribute="height" secondItem="dFw-tK-KfV" secondAttribute="height" id="kmN-vs-gnw"/>
+                            <constraint firstAttribute="bottom" secondItem="h10-Sx-kIj" secondAttribute="bottom" id="o65-vG-Awn"/>
                             <constraint firstItem="f7S-9Z-9wy" firstAttribute="height" secondItem="dFw-tK-KfV" secondAttribute="height" id="qnT-s9-dhb"/>
                             <constraint firstItem="f7S-9Z-9wy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xIz-Ue-WqJ"/>
+                            <constraint firstAttribute="bottom" secondItem="p69-hX-dg5" secondAttribute="bottom" id="zoH-4N-t3T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -140,10 +140,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Button" width="300" height="300"/>
-        <namedColor name="GrayLight">
-            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="Button" width="100" height="100"/>
         <namedColor name="Red">
             <color red="0.78431372549019607" green="0.11372549019607843" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
