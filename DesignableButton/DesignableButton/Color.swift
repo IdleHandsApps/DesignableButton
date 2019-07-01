@@ -9,11 +9,6 @@
 import UIKit
 
 class Color: NSObject {
-
-    // for Crayons https://github.com/Sephiroth87/Crayons
-    class func paletteName() -> String {
-        return "Palette"
-    }
     
     class var red: UIColor {
         return UIColor(named: "Red") ?? UIColor.red
